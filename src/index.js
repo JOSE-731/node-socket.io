@@ -3,6 +3,9 @@ import app from './app';
 import {Server as WebsocketServer} from 'socket.io';
 import http from 'http';
 
+import {connectDB} from './db';
+connectDB();
+
 //Creamos un servidor http el cual servirá para ejecutar Websocket
 const server = http.createServer(app);
 const httpServer = server.listen(3000);

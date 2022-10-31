@@ -1,0 +1,13 @@
+Socket.io: Un modulo que nos permitirá tener conexiones en tiempo real con el cliente y enviar enventos
+
+Mongoose: Modulo que nos permite conectarnos a la base de datos y poder modelarla 
+
+Babel: Compilador gratis de codigo abierto, 
+
+npm i @babel/core: Para instalar el core de la aplicacion, @babel/cli, compilar el codigo desde la consola
+
+@babel/node, forma de utilizar babel con node @babel/preset-env, para trabajar con la ultima version de node
+
+npm i -D nodemon @babel/core @babel/cli @babel/node @babel/preset-env
+
+npm i -D: Sirve para instalar modulos de dependencia desarrollo

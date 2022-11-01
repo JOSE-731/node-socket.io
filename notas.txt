@@ -11,3 +11,9 @@ npm i @babel/core: Para instalar el core de la aplicacion, @babel/cli, compilar 
 npm i -D nodemon @babel/core @babel/cli @babel/node @babel/preset-env
 
 npm i -D: Sirve para instalar modulos de dependencia desarrollo
+
+soket.emit: Solo envia mensaje a la ventana que requiere el evento desde el cliente
+
+socket.io: Emite mensaje a todas las ventanas conectadas
+
+io.emit: Emite el mensaje a todas las ventanas conectadas

@@ -20,8 +20,14 @@ export default (io) => {
         socket.on('client:newnote', async data => {
            const newNote = new Note(data);
            const savedNote = await newNote.save();
-           socket.emit("server:newnote", savedNote);
+           io.emit("server:newnote", savedNote);
         });
+
+        //Recibimos el id, para eliminar una nota en concreto
+        socket.on('client:deletenote', async(id) =>{
+            await Note.findByIdAndDelete(id);
+            emitNotes();
+        })
 
     })
 }

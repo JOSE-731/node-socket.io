@@ -23,3 +23,8 @@ export const onNewNote = (callback) =>{
     socket.on('server:newnote', callback)
 }
 
+//Creando emitiendo evento para eliminar una nota
+export const deleteNote = id =>{
+    socket.emit('client:deletenote', id)
+}
+

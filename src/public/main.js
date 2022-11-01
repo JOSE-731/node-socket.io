@@ -1,6 +1,16 @@
-//Este objeto sirve para especificarle al servidor que metodo usaremos para disparar eventos
-//Es la forma en la que se comunica el cliente y el servidor
-const socket = io()
-socket.on('loadnotes', (data) => {
-    console.log(data);
-})
+import {loadnotes} from "./sockets.js";
+import {saveNote} from "./sockets.js";
+loadnotes();
+
+//Accedemos al id del formulario
+const noteForm = document.querySelector("#noteForm")
+
+//Accedemos al evento submit
+noteForm.addEventListener('submit', (e)=>{
+    e.preventDefault()
+
+    saveNote(
+        noteForm['title'].value,
+        noteForm['description'].value,
+    );
+});

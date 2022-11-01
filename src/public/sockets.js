@@ -6,11 +6,9 @@
 server. */
 const socket = io();
 
-export const loadnotes = () =>{
-    socket.on('loadnotes', (data) => {
-        console.log(data);
-    })
-}
+export const loadNotes = (callback) =>{
+    socket.on('loadnotes', callback);
+};
 
 //Aqui obtenemos la informacion que se senvia en el formulario
 export const saveNote = (title, description) =>{

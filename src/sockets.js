@@ -10,7 +10,6 @@ export default (io) => {
         //Hacemos una consulta que se ejecuta cada que visitan la pagina
         const emitNotes = async () => {
             const notes = await Note.find()
-            console.log(notes)
 
             //Este metodo sirve para enviar data al cliente
             io.emit('loadnotes', notes);

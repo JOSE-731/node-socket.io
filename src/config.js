@@ -1,3 +1,4 @@
+/* This is a way to import the .env file into the app.js file. */
 import {config} from 'dotenv';
 config()
 

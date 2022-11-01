@@ -1,3 +1,4 @@
+/* The above code is creating a server that will listen to the port 3000. */
 import app from './app';
 //Importamos socket.io y creamos un alias cuyo nombre es WebsocketServer
 import {Server as WebsocketServer} from 'socket.io';

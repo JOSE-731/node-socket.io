@@ -1,3 +1,4 @@
+/* Creating a schema for the database. */
 import { Schema, model } from "mongoose";
 
 const schema = new Schema(

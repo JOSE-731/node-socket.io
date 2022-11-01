@@ -1,3 +1,4 @@
+/* A function that is being called. */
 import {loadnotes} from "./sockets.js";
 import {saveNote} from "./sockets.js";
 loadnotes();

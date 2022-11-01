@@ -1,3 +1,4 @@
+/* A function that is being exported. */
 //Importamos el modelo
 import Note from './models/Note'
 

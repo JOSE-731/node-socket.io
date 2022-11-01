@@ -1,8 +1,8 @@
 /* A function that is being called. */
-import {loadNotes} from "./sockets.js";
-import {saveNote} from "./sockets.js";
-import {renderNotas} from "./uil.js";
+import {loadNotes, onNewNote, saveNote} from "./sockets.js";
+import {renderNotas, appendNote} from "./uil.js";
 
+onNewNote(appendNote);
 loadNotes(renderNotas);
 
 //Accedemos al id del formulario

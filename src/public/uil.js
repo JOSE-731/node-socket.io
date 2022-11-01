@@ -25,3 +25,8 @@ export const renderNotas = notes => {
     });
 
 }
+
+//Agregamos a la vista para que se actualice cada que se agrega una nota nueva
+export const appendNote = note =>{
+    noteList.append(noteUI(note));
+}

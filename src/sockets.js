@@ -12,14 +12,15 @@ export default (io) => {
             const notes = await Note.find()
 
             //Este metodo sirve para enviar data al cliente
-            io.emit('loadnotes', notes);
+            io.emit('server:loadnotes', notes);
         }
         emitNotes();
 
         //Guardamos la data que se envia desde el cliente
-        socket.on('newnote', async data => {
+        socket.on('client:newnote', async data => {
            const newNote = new Note(data);
-           await newNote.save();
+           const savedNote = await newNote.save();
+           socket.emit("server:newnote", savedNote);
         });
 
     })
